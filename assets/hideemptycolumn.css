@@ -1,0 +1,9 @@
+td.hiddencolumn,th.hiddencolumn{
+overflow:hidden !important;
+border-spacing:0 !important;
+border-collapse:collapse !important;
+padding:0 !important;
+}
+table.widthhiddencolumn{
+border-collapse:collapse !important;
+}
