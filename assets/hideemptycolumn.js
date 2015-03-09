@@ -3,9 +3,9 @@
  * This allow using Expression Manager to hide answers in array question type
  *
  * @author Denis Chenu <denis@sondages.pro>
- * @copyright 2013-2014 Denis Chenu <http://sondages.pro>
+ * @copyright 2013-2015 Denis Chenu <http://sondages.pro>
  * @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&dn=gpl-3.0.txt GPL-v3-or-Later
- * @version 1.0
+ * @version 1.1
  *
  */
 $("table.question").each(function(){
@@ -20,9 +20,9 @@ $("table.question").each(function(){
             basetable.find('col').eq(colindex).css('width',0);
             basetable.find('col').eq(colindex).width(0);
             basetable.find('tr').each(function(){
-                $(this).find('td,th').eq(colindex).addClass('hiddencolumn').children().hide();
+                $(this).find('td,th').eq(colindex).addClass('hideEmptyColumn-hiddencolumn').children().hide();
             });
-            basetable.addClass('widthhiddencolumn');
+            basetable.addClass('hideEmptyColumn-widthhiddencolumn');
         }
     });
 });
