@@ -16,7 +16,7 @@ This plugin is tested with LimeSurvey 2.06.
 - Move the directory to  plugins/ directory inside LimeSUrvey
 
 ## Home page & Copyright
-- HomePage <http://extensions.sondages.pro/>
+- HomePage <http://extensions.sondages.pro/hideemptycolumn/>
 - Copyright © 2015-2016 Denis Chenu <http://sondages.pro>
 - Copyright © 2014 Incidence <http://www.incidence.be/>
 
