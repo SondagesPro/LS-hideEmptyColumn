@@ -13,22 +13,21 @@
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  */
-class hideEmptyColumn extends PluginBase {
+class hideEmptyColumn extends \ls\pluginmanager\PluginBase {
 
     protected $storage = 'DbStorage';
     static protected $name = 'Hide empty column';
     static protected $description = 'Hide directly the empty column in all array question type';
-    
-    
-    public function __construct(PluginManager $manager, $id) {
-        parent::__construct($manager, $id);
+
+
+    public function init() {
         $this->subscribe('beforeSurveyPage');
     }
 
