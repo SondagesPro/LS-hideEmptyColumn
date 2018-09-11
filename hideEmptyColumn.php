@@ -20,7 +20,7 @@
  * GNU General Public License for more details.
  *
  */
-class hideEmptyColumn extends \ls\pluginmanager\PluginBase {
+class hideEmptyColumn extends PluginBase {
 
     protected $storage = 'DbStorage';
     static protected $name = 'Hide empty column';
