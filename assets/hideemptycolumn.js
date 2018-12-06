@@ -8,9 +8,9 @@
  * @version 1.1
  *
  */
-$("table.question").each(function(){
+$("table.question,table.ls-answers").each(function(){
     var basetable=$(this);
-    basetable.find('col.odd,col.even').addClass('havewidth');
+    basetable.find('col.odd,col.even,col.ls-col-odd,col.ls-col-even').addClass('havewidth');
     $(this).find("thead th").each(function(){
         if($.trim($(this).html())==""){
             if(basetable.find('col.havewidth').length){
