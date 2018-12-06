@@ -4,7 +4,7 @@ Hide the empty column in LimeSurvey. Demonstration of usage : <https://demonstra
 
 ## Installation
 
-This plugin is tested with LimeSurvey 2.06, and 2.50. In 2.50 here are still some cosmectic issue for the width of some column.
+This plugin is tested with LimeSurvey 2.06, 2.50 and 3.15.5. In 2.50 here are still some cosmectic issue for the width of some column. No issue in 3.15 with [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla).
 
 ### Via GIT
 - Go to your LimeSurvey Directory (version up to 2.06 only)
