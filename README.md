@@ -1,6 +1,9 @@
 # hideEmptyColumn #
 
-Hide the empty column in LimeSurvey. Demonstration of usage : <https://demonstration.sondages.pro/655577>
+Hide the empty column in LimeSurvey. Demonstration of usage : 
+
+- on 2.6 <https://demonstration.sondages.pro/655577>
+- on current 3.X : <https://demo.sondages.pro/index.php/655577>
 
 ## Installation
 
