@@ -1,13 +1,13 @@
 # hideEmptyColumn #
 
-Hide the empty column in LimeSurvey. Demonstration of usage : 
-
-- on 2.6 <https://demonstration.sondages.pro/655577>
-- on current 3.X : <https://demo.sondages.pro/index.php/655577>
+Hide the empty column in LimeSurvey. Demonstration of usage on current 3.X : <https://demo.sondages.pro/index.php/655577>
 
 ## Installation
 
-This plugin is tested with LimeSurvey 2.06, 2.50 and 3.15.5. In 2.50 here are still some cosmectic issue for the width of some column. No issue in 3.15 with [skelvanilla](https://gitlab.com/SondagesPro/SurveyThemes/skelvanilla).
+This plugin is tested with LimeSurvey 3.15.5,  3.27.34  and 5.2.9. 
+
+Only single choice question array are compatible.
+
 
 ### Via GIT
 - Go to your LimeSurvey Directory (version up to 2.06 only)
@@ -20,7 +20,7 @@ This plugin is tested with LimeSurvey 2.06, 2.50 and 3.15.5. In 2.50 here are st
 
 ## Home page & Copyright
 - HomePage <https://extensions.sondages.pro/rubrique5>
-- Copyright © 2015-2018 Denis Chenu <https://sondages.pro>
+- Copyright © 2015-2021 Denis Chenu <https://sondages.pro>
 - Copyright © 2014 Incidence <http://www.incidence.be/>
 
 Distributed under [GNU GENERAL PUBLIC LICENSE Version 3](https://gnu.org/licenses/gpl-3.0.txt) licence

@@ -4,10 +4,10 @@
  * hide empty column in public question table
  *
  * @author Denis Chenu <denis@sondages.pro>
- * @copyright 2014 Denis Chenu <http://sondages.pro>
+ * @copyright 2014-2022 Denis Chenu <http://sondages.pro>
  * @copyright 2014 Incidence <http://www.incidence.be/>
  * @license GPL v3
- * @version 1.0
+ * @version 2.0.0
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,6 +33,9 @@ class hideEmptyColumn extends PluginBase {
 
     public function beforeSurveyPage()
     {
+        if (!$this->getEvent()) {
+            throw new CHttpException(403);
+        }
         $oEvent = $this->event;
         $iSurveyId = $oEvent->get('surveyId');
         $assetUrl = Yii::app()->assetManager->publish(dirname(__FILE__) . '/assets');
