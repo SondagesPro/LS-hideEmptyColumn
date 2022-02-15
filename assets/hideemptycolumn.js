@@ -12,7 +12,7 @@ $("table.ls-answers").each(function(){
     var basetable=$(this);
     var countEmpty = 0;
     var countNotEmpty = 0;
-        $(this).find("thead th.answer-text,thead th.answertext").each(function(){
+        $(this).find("thead th").each(function(){
             var colindex=$(this).parent('tr').find('td,th').index($(this));
             if($.trim($(this).html())==""){
                 basetable.find('col').eq(colindex).css('width',0);
@@ -28,7 +28,7 @@ $("table.ls-answers").each(function(){
             }
         });
         if(countEmpty && countNotEmpty && $(this).find('col.col-answers')) {
-            var colanswersWidth = basetable.find('col.col-answers').attr("style").replace("width:","").replace("%","").replace(";","").trim();
+            var colanswersWidth = $(this).find('col').attr("style").replace("width:","").replace("%","").replace(";","").trim();
             if(!isNaN(colanswersWidth)) {
                 finalWidth = (100 - colanswersWidth)/countNotEmpty;
                 console.warn(finalWidth);

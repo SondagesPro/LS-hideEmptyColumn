@@ -8,7 +8,7 @@
         <author>Denis Chenu</author>
         <authorUrl>https://extensions.sondages.pro/questions-updating-and-managing/hideemptycolumn/</authorUrl>
         <email>support@sondages.pro</email>
-        <version>2.0.0</version>
+        <version>2.0.1</version>
         <license>GNU GENERAL PUBLIC LICENSE Version 3</license>
         <description>Use Expression Manager to hide column in LimeSurvey. This plugin add some javascript to column with empty header in array question type.</description>
         <supportUrl>https://extensions.sondages.pro/questions-updating-and-managing/hideemptycolumn/</supportUrl>
