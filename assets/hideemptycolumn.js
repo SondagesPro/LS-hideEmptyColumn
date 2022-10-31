@@ -10,28 +10,34 @@
  */
 $("table.ls-answers").each(function(){
     var basetable=$(this);
+    var fixedtable = $(this).hasClass('table-fixed') || $(this).hasClass('table-responsive');
     var countEmpty = 0;
     var countNotEmpty = 0;
-        $(this).find("thead th").each(function(){
-            var colindex=$(this).parent('tr').find('td,th').index($(this));
-            if($.trim($(this).html())==""){
-                basetable.find('col').eq(colindex).css('width',0);
-                basetable.find('col').eq(colindex).width(0);
-                basetable.find('tr').each(function(){
-                    $(this).find('td,th').eq(colindex).addClass('hideEmptyColumn-hiddencolumn').children().hide();
-                });
-                basetable.addClass('hideEmptyColumn-widthhiddencolumn');
-                countEmpty++;
-            } else {
-                basetable.find('col').eq(colindex).addClass('havewidth');
-                countNotEmpty++;
+        $(this).find("thead tr th").each(function(){
+            var colindex = $(this).parent('tr').find('td,th').index($(this));
+            if (colindex > 0) {
+                if($.trim($(this).html())==""){
+                    basetable.find('col').eq(colindex).css('width',0);
+                    basetable.find('col').eq(colindex).width(0);
+                    basetable.find('tr').each(function(){
+                        if(fixedtable) {
+                            $(this).find('td,th').eq(colindex).addClass('hideEmptyColumn-hiddencolumn').children().hide();
+                        } else {
+                            $(this).find('td,th').eq(colindex).addClass('hideEmptyColumn-hiddencolumn').addClass('hidden-xs').children().hide();
+                        }
+                    });
+                    basetable.addClass('hideEmptyColumn-widthhiddencolumn');
+                    countEmpty++;
+                } else {
+                    basetable.find('col').eq(colindex).addClass('havewidth');
+                    countNotEmpty++;
+                }
             }
         });
         if(countEmpty && countNotEmpty && $(this).find('col.col-answers')) {
             var colanswersWidth = $(this).find('col').attr("style").replace("width:","").replace("%","").replace(";","").trim();
             if(!isNaN(colanswersWidth)) {
                 finalWidth = (100 - colanswersWidth)/countNotEmpty;
-                console.warn(finalWidth);
                 $(this).find('col.havewidth').css("width",finalWidth+"%");
             }
         }

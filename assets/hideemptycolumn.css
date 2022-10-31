@@ -1,7 +1,6 @@
 td.hideEmptyColumn-hiddencolumn,th.hideEmptyColumn-hiddencolumn{
     overflow:hidden !important;
     border-spacing:0 !important;
-    border-collapse:collapse !important;
     padding:0 !important;
     width: 0 !important;
     height: 0 !important;
@@ -10,8 +9,3 @@ td.hideEmptyColumn-hiddencolumn,th.hideEmptyColumn-hiddencolumn{
 td.hideEmptyColumn-hiddencolumn *,th.hideEmptyColumn-hiddencolumn * {
     display:none;
 }
-table.ls-answers > tbody > tr > td.hideEmptyColumn-hiddencolumn{border-collapse:collapse !important;}
-table.hideEmptyColumn-widthhiddencolumn{
-    border-collapse:collapse !important;
-}
-
